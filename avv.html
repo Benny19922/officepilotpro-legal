@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Auftragsverarbeitungsvertrag (AVV) – OfficePilotPro</title>
+<style>
+  :root { --ink:#2A2622; --muted:#6b6460; --accent:#2F5C8C; --line:#e4dddf; --bg:#f7f5f5; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+         line-height:1.6; }
+  .wrap { max-width:760px; margin:0 auto; padding:32px 20px 64px; }
+  header { border-bottom:2px solid var(--accent); padding-bottom:16px; margin-bottom:8px; }
+  h1 { font-size:1.6rem; margin:0 0 4px; color:var(--accent); }
+  h2 { font-size:1.12rem; margin:28px 0 6px; }
+  h3 { font-size:1rem; margin:20px 0 4px; }
+  .meta { color:var(--muted); font-size:.9rem; }
+  p, li { font-size:1rem; }
+  table { border-collapse:collapse; width:100%; margin-top:8px; font-size:.95rem; }
+  th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+  footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--line);
+           color:var(--muted); font-size:.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Auftragsverarbeitungsvertrag (AVV)</h1>
+    <div class="meta">App „OfficePilotPro" · Art. 28 DSGVO · Stand: 2. Juli 2026</div>
+  </header>
+
+  <p>Dieser Vertrag konkretisiert die Pflichten aus Art. 28 DSGVO zwischen der Nutzerin der App
+     „OfficePilotPro" (Verantwortliche) und dem Anbieter Benjamin Ahner (Auftragsverarbeiter,
+     Anschrift siehe Impressum). Er gilt als geschlossen, sobald die Nutzerin ihm bei der
+     Registrierung zustimmt.</p>
+
+  <h2>§ 1 Gegenstand und Dauer</h2>
+  <p>Der Anbieter verarbeitet personenbezogene Daten im Auftrag der Nutzerin ausschließlich zur
+     Erbringung der App-Funktionen (Rechnungs-/Angebots-, Kunden-, Ausgaben- und Terminverwaltung
+     sowie Auswertung/Export). Die Dauer entspricht dem Bestehen des Kontos.</p>
+
+  <h2>§ 2 Art, Zweck und Umfang</h2>
+  <p>Verarbeitung ausschließlich zum Zweck der Bereitstellung der App. Eine Verarbeitung zu eigenen
+     Zwecken des Anbieters (insb. Werbung, Verkauf) findet nicht statt.</p>
+
+  <h2>§ 3 Art der Daten und betroffene Personen</h2>
+  <p>Datenarten: Stammdaten (Name, Anschrift), Kontaktdaten, Vertrags-/Rechnungsdaten, Termindaten,
+     ggf. Belegfotos. Betroffene: Kundinnen/Kunden der Nutzerin.</p>
+
+  <h2>§ 4 Pflichten des Anbieters</h2>
+  <p>Verarbeitung nur auf Weisung der Nutzerin (dieser Vertrag + App-Nutzung gelten als Weisung);
+     Vertraulichkeit der befugten Personen; technische und organisatorische Maßnahmen nach Art. 32
+     DSGVO (siehe Anlage 1); Unterstützung bei Betroffenenrechten und Meldepflichten (Art. 32–36);
+     unverzügliche Information bei Datenschutzverletzungen.</p>
+
+  <h2>§ 5 Unterauftragsverarbeiter</h2>
+  <p>Die Nutzerin genehmigt die in Anlage 2 genannten Unterauftragsverarbeiter. Der Anbieter
+     verpflichtet diese auf gleichwertige Datenschutzpflichten und informiert vor einem Wechsel vorab
+     (Widerspruch aus wichtigem Grund möglich).</p>
+
+  <h2>§ 6 Drittland</h2>
+  <p>Eine Verarbeitung außerhalb der EU/des EWR erfolgt nur mit geeigneten Garantien
+     (EU-Standardvertragsklauseln), siehe Anlage 2.</p>
+
+  <h2>§ 7 Kontrolle und Nachweise</h2>
+  <p>Der Anbieter stellt die zum Nachweis erforderlichen Informationen bereit und ermöglicht
+     Überprüfungen in angemessenem Rahmen.</p>
+
+  <h2>§ 8 Löschung und Rückgabe</h2>
+  <p>Nach Beendigung werden die Daten gelöscht oder zurückgegeben (Export durch die Nutzerin möglich),
+     soweit keine gesetzliche Aufbewahrungspflicht entgegensteht. Die Konto-Löschung in der App
+     entfernt alle Daten unwiderruflich.</p>
+
+  <h2>§ 9 Haftung und Schlussbestimmungen</h2>
+  <p>Es gilt Art. 82 DSGVO sowie die AGB. Deutsches Recht; Änderungen in Textform; salvatorische
+     Klausel.</p>
+
+  <h3>Anlage 1 — Technische und organisatorische Maßnahmen (Art. 32)</h3>
+  <p>TLS-/HTTPS-Verschlüsselung; Speicherung in der EU (Supabase, AWS eu-west-1, Irland);
+     Authentifizierung je Konto und Datentrennung pro Konto (Row-Level-Security); Belegfotos in
+     privatem, zugriffsbeschränktem Speicher; regelmäßige Backups; kein Tracking; Löschung aller
+     Daten bei Konto-Löschung.</p>
+
+  <h3>Anlage 2 — Unterauftragsverarbeiter</h3>
+  <table>
+    <tr><th>Anbieter</th><th>Zweck</th><th>Ort / Garantie</th></tr>
+    <tr><td>Supabase Inc.</td><td>Datenbank, Authentifizierung, Datei-Speicher</td><td>Server EU (Irland); Anbieter USA — DPA + EU-Standardvertragsklauseln</td></tr>
+    <tr><td>RevenueCat Inc.</td><td>Abo-/Kaufverwaltung</td><td>USA — DPA + Standardvertragsklauseln</td></tr>
+    <tr><td>Apple / Google</td><td>Zahlungsabwicklung der In-App-Käufe</td><td>gemäß App-Store-/Play-Bedingungen</td></tr>
+  </table>
+
+  <footer>© 2026 Benjamin Ahner · Auftragsverarbeitungsvertrag zur App „OfficePilotPro".</footer>
+</div>
+</body>
+</html>
