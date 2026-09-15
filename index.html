@@ -30,7 +30,7 @@
 <div class="wrap">
   <header>
     <h1>Datenschutzerklärung</h1>
-    <div class="meta">Website officepilotpro &amp; App „OfficePilotPro" · Stand: 25. Juli 2026</div>
+    <div class="meta">Website officepilotpro &amp; App „OfficePilotPro" · Stand: 16. September 2026</div>
   </header>
 
   <h2>1. Verantwortlicher</h2>
@@ -123,8 +123,8 @@
     <li><strong>Vom Nutzer erfasste Inhalte</strong> (Kundendaten des Nutzers, Verarbeitung im
         Auftrag): Kundendaten (Name, Anschrift, E-Mail, Telefon, Notizen, Entfernung),
         Leistungskatalog, Rechnungen und Angebote (inkl. eingefrorener Kunden- und
-        Aussteller-Schnappschüsse), Ausgaben inkl. <strong>Belegfotos</strong> (Aufnahme über
-        Kamera oder Fotomediathek), Geschäftsfahrten, Termine/Kalenderdaten (Kundenname,
+        Aussteller-Schnappschüsse), Ausgaben inkl. <strong>Belegen</strong> (Fotos über
+        Kamera oder Fotomediathek sowie PDF-Dateien über die Dateiauswahl), Geschäftsfahrten, Termine/Kalenderdaten (Kundenname,
         Datum/Zeit, Ort, Notiz), Gutscheine und Gutschein-Bewegungen.</li>
     <li><strong>Feedback:</strong> Sendet der Nutzer über die App Feedback, werden Kategorie,
         Nachricht, App-Version und Plattform gespeichert.</li>
@@ -148,7 +148,7 @@
 
   <h2>9. Empfänger und Auftragsverarbeiter</h2>
   <ul>
-    <li><strong>Supabase</strong> (Datenbank, Authentifizierung, Datei-Speicher für Belegfotos
+    <li><strong>Supabase</strong> (Datenbank, Authentifizierung, Datei-Speicher für Belege
         und Logos): Serverstandort <strong>EU (Irland, AWS-Region eu-west-1)</strong>.
         Anbieter: Supabase, Inc. (USA); mit Supabase besteht ein Auftragsverarbeitungsvertrag
         (DPA); soweit ein Zugriff aus einem Drittland möglich ist, ist dieser durch
@@ -174,25 +174,37 @@
      Crash-Reporting-Dienste. Schriftarten sind in der App gebündelt; es werden keine
      Schriften von Google-Servern nachgeladen.</p>
 
-  <h2>10. Kamera-, Foto- und Kalenderzugriff</h2>
-  <p>Der Zugriff auf Kamera bzw. Fotomediathek dient ausschließlich dem freiwilligen
-     Hinzufügen von Belegfotos zu Ausgaben; die Fotos werden in einem privaten,
-     zugriffsbeschränkten Speicher (Supabase Storage, EU) abgelegt. Auf Wunsch kann ein Termin
+  <h2>10. Kamera-, Foto-, Datei- und Kalenderzugriff</h2>
+  <p>Der Zugriff auf Kamera, Fotomediathek bzw. die Dateiauswahl des Betriebssystems
+     dient ausschließlich dem freiwilligen Hinzufügen von Belegen zu Ausgaben — als Foto oder
+     als PDF-Datei, höchstens zehn Anhänge je Ausgabe. Die App erhält dabei nur die vom Nutzer
+     ausgewählten Dateien; sie werden in einem privaten, zugriffsbeschränkten Speicher
+     (Supabase Storage, EU) abgelegt. Auf Wunsch kann ein Termin
      in den lokalen Geräte-Kalender übernommen werden — dafür wird einmalig Kalenderzugriff
      erfragt; die Termindaten verbleiben dabei auf dem Gerät. Das Teilen einer Termindatei
      (.ics) oder eines Rechnungs-PDFs erfolgt ausschließlich durch den Nutzer an selbst
      gewählte Empfänger.</p>
 
   <h2>11. Lokale Speicherung auf dem Gerät</h2>
-  <p>Auf dem Gerät werden lediglich Darstellungs-Einstellungen gespeichert (gewählte
-     App-Farbe, Dark Mode). Diese Daten haben keinen Personenbezug und werden nicht
-     übertragen.</p>
+  <p>Auf dem Gerät werden Darstellungs-Einstellungen (gewählte App-Farbe, Dark Mode),
+     technische Merker (z. B. welche Neuerungen bereits angezeigt wurden) sowie die
+     Anmelde-Sitzung gespeichert, damit die App angemeldet bleibt. Diese Daten werden nicht an
+     Dritte übertragen.</p>
+  <p>Schaltet der Nutzer die <strong>Anmeldung per Face ID, Touch ID, Fingerabdruck oder
+     Gesichtserkennung</strong> ein, werden zusätzlich seine E-Mail-Adresse und sein Passwort
+     im geschützten Speicher des Geräts hinterlegt (iOS-Schlüsselbund bzw. Android-Keystore) —
+     ausschließlich dort, nicht beim Anbieter. Die biometrische Prüfung führt allein das
+     Betriebssystem durch; die App erhält <strong>keine biometrischen Daten</strong>, sondern
+     nur die Rückmeldung, ob die Prüfung erfolgreich war (ersatzweise kann die Gerätesperre
+     verwendet werden). Die Funktion ist freiwillig und lässt sich jederzeit in den
+     Einstellungen im Bereich Konto ausschalten; die hinterlegten Zugangsdaten werden dabei
+     gelöscht, ebenso bei einer Konto-Löschung.</p>
 
   <h2>12. Speicherdauer und Konto-Löschung</h2>
   <p>Daten werden gespeichert, solange das Nutzerkonto besteht. Das Konto kann in der App
      jederzeit selbst gelöscht werden (Einstellungen → Konto löschen). Bei der Löschung werden
      <strong>alle</strong> personenbezogenen Daten und Inhalte (Geschäftsdaten, Kundendaten,
-     Rechnungen, Ausgaben, Belegfotos, Termine, Gutscheine, Logo) sowie das Login
+     Rechnungen, Ausgaben, Belege, Termine, Gutscheine, Logo) sowie das Login
      <strong>sofort und unwiderruflich</strong> gelöscht; vor der Löschung bietet die App
      einen vollständigen Datenexport an. Für die Einhaltung steuerlicher Aufbewahrungsfristen
      (z. B. § 147 AO, bis zu 10 Jahre) für seine Geschäftsunterlagen ist der Nutzer selbst
@@ -225,7 +237,7 @@
   <h2>16. Datensicherheit</h2>
   <p>Alle Verbindungen sind transportverschlüsselt (TLS/HTTPS); die Speicherung erfolgt
      verschlüsselt in der EU. Jedes Konto ist strikt getrennt (Row-Level-Security: Zugriff nur
-     auf eigene Daten); Belegfotos und Logos liegen in einem privaten Speicher und sind nur
+     auf eigene Daten); Belege und Logos liegen in einem privaten Speicher und sind nur
      über kurzlebige signierte Links abrufbar.</p>
 
   <h2>17. Änderungen dieser Erklärung</h2>

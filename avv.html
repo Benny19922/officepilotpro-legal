@@ -31,7 +31,7 @@
 <div class="wrap">
   <header>
     <h1>Auftragsverarbeitungsvertrag (AVV)</h1>
-    <div class="meta">App „OfficePilotPro" · Art. 28 DSGVO · Stand: 25. August 2026</div>
+    <div class="meta">App „OfficePilotPro" · Art. 28 DSGVO · Stand: 16. September 2026</div>
   </header>
 
   <h2>Präambel und Parteien</h2>
@@ -70,7 +70,8 @@
         Zahlungsart und Zahldatum, Gutscheindaten)</li>
     <li>Termindaten (Datum/Zeit, Ort, Titel, Notiz)</li>
     <li>Freitext-Notizen des Nutzers zu seinen Kundinnen und Kunden</li>
-    <li>hochgeladene Belegfotos (soweit sie personenbezogene Daten enthalten)</li>
+    <li>hochgeladene Belege als Foto oder PDF-Datei (soweit sie personenbezogene Daten
+        enthalten)</li>
   </ul>
   <p><strong>Kategorien betroffener Personen:</strong> Kundinnen und Kunden des Nutzers sowie
      ggf. dessen Lieferanten und Geschäftskontakte.</p>
@@ -128,7 +129,7 @@
   <h2>§ 8 Löschung und Rückgabe</h2>
   <p>(1) Der Nutzer kann seine Daten jederzeit selbst über die Exportfunktionen der App
      zurückerhalten (CSV/PDF/ZIP-Komplettarchiv).</p>
-  <p>(2) Mit der Löschung des Kontos werden sämtliche Auftragsdaten einschließlich Belegfotos
+  <p>(2) Mit der Löschung des Kontos werden sämtliche Auftragsdaten einschließlich der Belege
      <strong>sofort und unwiderruflich</strong> gelöscht; vor der Löschung bietet die App
      einen vollständigen Export an. Eine gesetzliche Aufbewahrung der Geschäftsunterlagen
      obliegt dem Nutzer (Export vor Löschung).</p>
@@ -158,7 +159,7 @@
     <li><strong>Mandantentrennung:</strong> Strikte Datentrennung pro Konto über
         Row-Level-Security auf Datenbankebene — jeder Nutzer kann ausschließlich auf die
         eigenen Daten zugreifen.</li>
-    <li><strong>Speicherkontrolle:</strong> Belegfotos und Logos in einem privaten,
+    <li><strong>Speicherkontrolle:</strong> Belege und Logos in einem privaten,
         zugriffsbeschränkten Storage-Bucket; Abruf nur über kurzlebige signierte URLs
         (Gültigkeit 1 Stunde).</li>
     <li><strong>Integrität:</strong> Kritische Geschäftslogik (Festschreibung, Stornierung,
@@ -173,7 +174,7 @@
     <li><strong>Datenminimierung:</strong> Kein Tracking, keine Analyse-/Werbedienste, keine
         Verarbeitung zu Fremdzwecken.</li>
     <li><strong>Löschkonzept:</strong> Konto-Löschung entfernt alle personenbezogenen Daten
-        einschließlich Belegfotos und Login sofort und unwiderruflich; zuvor automatisches
+        einschließlich Belege und Login sofort und unwiderruflich; zuvor automatisches
         Export-Angebot.</li>
   </ul>
 
@@ -182,7 +183,7 @@
     <tr><th>Unterauftragsverarbeiter</th><th>Zweck</th><th>Ort der Verarbeitung / Garantie</th></tr>
     <tr>
       <td>Supabase, Inc. (USA)</td>
-      <td>Datenbank, Authentifizierung, Datei-Speicher (Belegfotos, Logos)</td>
+      <td>Datenbank, Authentifizierung, Datei-Speicher (Belege, Logos)</td>
       <td>Server: EU (Irland, AWS eu-west-1). Auftragsverarbeitungsvertrag (DPA); für etwaige
           Drittlandzugriffe EU-Standardvertragsklauseln</td>
     </tr>
