@@ -31,7 +31,7 @@
 <div class="wrap">
   <header>
     <h1>Auftragsverarbeitungsvertrag (AVV)</h1>
-    <div class="meta">App „OfficePilotPro" · Art. 28 DSGVO · Stand: 16. September 2026</div>
+    <div class="meta">App „OfficePilotPro" · Art. 28 DSGVO · Stand: 25. September 2026</div>
   </header>
 
   <h2>Präambel und Parteien</h2>
@@ -133,8 +133,7 @@
      <strong>sofort und unwiderruflich</strong> gelöscht; vor der Löschung bietet die App
      einen vollständigen Export an. Eine gesetzliche Aufbewahrung der Geschäftsunterlagen
      obliegt dem Nutzer (Export vor Löschung).</p>
-  <p>(3) Sicherungskopien werden turnusmäßig überschrieben; eine Wiederherstellung
-     gelöschter Konten aus Sicherungen findet nicht statt.</p>
+  <p>(3) Sicherungskopien werden nach 30 Tagen, Sicherungen vor größeren technischen Eingriffen spätestens nach 90 Tagen automatisch überschrieben; eine Wiederherstellung gelöschter Konten aus Sicherungen findet nicht statt.</p>
 
   <h2>§ 9 Haftung</h2>
   <p>Für die Haftung gilt Art. 82 DSGVO; im Übrigen gelten die Haftungsregelungen des
@@ -154,8 +153,7 @@
     <li><strong>Verschlüsselung im Ruhezustand:</strong> Speicherung in der EU (Supabase auf
         Amazon Web Services, Region eu-west-1, Irland) mit Verschlüsselung at rest.</li>
     <li><strong>Zugriffs- und Zugangskontrolle:</strong> Authentifizierung je Konto
-        (E-Mail/Passwort, Passwörter nur als Hash); Passwort-Zurücksetzen nur über
-        verifizierte E-Mail.</li>
+        (E-Mail/Passwort, Passwörter nur als Hash); Passwort-Zurücksetzen nur über verifizierte E-Mail; Passwortregel (mindestens 10 Zeichen mit Buchstaben und Ziffern) und Ablehnung von Passwörtern aus bekannten Datenlecks; Anmelde-Sitzung auf dem Gerät im geschützten Speicher; Datenbankrolle ohne Anmeldung ohne jedes Tabellenrecht.</li>
     <li><strong>Mandantentrennung:</strong> Strikte Datentrennung pro Konto über
         Row-Level-Security auf Datenbankebene — jeder Nutzer kann ausschließlich auf die
         eigenen Daten zugreifen.</li>
@@ -167,7 +165,7 @@
         Veränderung geschützt.</li>
     <li><strong>Verfügbarkeit und Wiederherstellbarkeit:</strong> Automatisierte Sicherung der
         Datenbank einschließlich der Belegdateien durch den Anbieter, vorgesehen im
-        Tagesrhythmus; Aufbewahrung verschlüsselt und getrennt von der Produktivumgebung.
+        Tagesrhythmus; Aufbewahrung verschlüsselt und getrennt von der Produktivumgebung, 30 Tage (Sicherungen vor Eingriffen 90 Tage).
         Die Wiederherstellung aus einer Sicherung wurde erprobt. Eine ununterbrochene
         Sicherung wird nicht geschuldet; der Nutzer bleibt gehalten, seine Daten zusätzlich
         selbst zu exportieren (AGB § 7 Abs. 2).</li>

@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
+<!-- Inhaltsrichtlinie: nur eigene Skripte, Verbindung nur zu Supabase und zum Leak-Prüfdienst
+     (Have I Been Pwned, erhält nur 5 Zeichen eines Prüfwerts). Kein Fremdskript kann hier ein
+     getipptes Passwort mitlesen. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; connect-src https://smxskaqoijdagppikdsp.supabase.co https://api.pwnedpasswords.com; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
 <title>Passwort zurücksetzen – OfficePilotPro</title>
 <style>
   :root { --ink:#2A2622; --muted:#6b6460; --accent:#2F5C8C; --green:#2E7D5B; --red:#c0392b; --line:#e4dddf; --bg:#f7f5f5; }
@@ -35,7 +39,7 @@
 
     <div id="form">
       <label for="pw1">Neues Passwort</label>
-      <input id="pw1" type="password" autocomplete="new-password" placeholder="Mindestens 6 Zeichen">
+      <input id="pw1" type="password" autocomplete="new-password" placeholder="Mindestens 10 Zeichen, Buchstaben und Ziffern">
       <label for="pw2">Passwort wiederholen</label>
       <input id="pw2" type="password" autocomplete="new-password">
       <button id="save" disabled>Passwort speichern</button>
@@ -44,53 +48,10 @@
     <div id="msg" class="msg"></div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script>
-    const SUPABASE_URL = 'https://smxskaqoijdagppikdsp.supabase.co';
-    const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNteHNrYXFvaWpkYWdwcGlrZHNwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEyMTk2MTMsImV4cCI6MjA5Njc5NTYxM30._iIchkPdEHuuXwW4DImpR9risFRqsiNRgaH6M5Q9DcY';
-
-    const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
-      auth: { detectSessionInUrl: true, flowType: 'implicit' }
-    });
-
-    const $ = (id) => document.getElementById(id);
-    const msg = $('msg'), save = $('save'), form = $('form'), intro = $('intro');
-    let hasSession = false;
-
-    function show(text, ok) { msg.textContent = text; msg.className = 'msg ' + (ok ? 'ok' : 'err'); }
-
-    function enableForm() {
-      if (hasSession) return;
-      hasSession = true;
-      save.disabled = false;
-    }
-
-    // Recovery-Session aus dem URL-Fragment übernehmen.
-    client.auth.onAuthStateChange((event, session) => {
-      if (event === 'PASSWORD_RECOVERY' || session) enableForm();
-    });
-    setTimeout(async () => {
-      const { data } = await client.auth.getSession();
-      if (data.session) enableForm();
-      else if (!hasSession) {
-        form.classList.add('hidden');
-        intro.textContent = 'Der Link ist ungültig oder abgelaufen. Bitte fordere in der App einen neuen an.';
-      }
-    }, 1500);
-
-    save.addEventListener('click', async () => {
-      const pw1 = $('pw1').value, pw2 = $('pw2').value;
-      if (pw1.length < 6) { show('Das Passwort muss mindestens 6 Zeichen haben.', false); return; }
-      if (pw1 !== pw2) { show('Die Passwörter stimmen nicht überein.', false); return; }
-      save.disabled = true; show('Speichern …', true);
-      const { error } = await client.auth.updateUser({ password: pw1 });
-      if (error) { show('Fehler: ' + error.message, false); save.disabled = false; }
-      else {
-        form.classList.add('hidden');
-        intro.classList.add('hidden');
-        show('✓ Passwort geändert. Du kannst dich jetzt in der OfficePilotPro-App mit dem neuen Passwort anmelden.', true);
-      }
-    });
-  </script>
+  <!-- Supabase-Bibliothek liegt lokal in fester Version — kein CDN, kein „irgendeine Version 2".
+       SHA-256 dff1e545… am 25.09.2026 gegen jsDelivr und unpkg gleich geprüft. Neue Version:
+       Datei in vendor/ tauschen und hier den Namen anpassen. -->
+  <script src="vendor/supabase-js-2.117.1.min.js"></script>
+  <script src="passwort-zuruecksetzen.js"></script>
 </body>
 </html>
