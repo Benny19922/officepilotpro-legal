@@ -43,7 +43,8 @@
   <h2>2. Geltungsbereich und Überblick</h2>
   <p>Diese Erklärung informiert über die Verarbeitung personenbezogener Daten
      <strong>beim Besuch unserer Website</strong> (Teil A),
-     <strong>bei der Nutzung der App „OfficePilotPro"</strong> (Teil B) und
+     <strong>bei der Nutzung der App „OfficePilotPro"</strong> einschließlich des Web-Zugangs
+     unter app.officepilotpro.de (Teil B) und
      <strong>beim Besuch unserer Auftritte bei Facebook und Instagram</strong> (Teil C).</p>
   <p>Grundsatz für Website und App: Wir verarbeiten so wenige Daten wie möglich. Es findet <strong>kein
      Tracking</strong> statt, es werden <strong>keine Cookies</strong> gesetzt, es gibt
@@ -135,6 +136,14 @@
         Nachricht, App-Version und Plattform gespeichert.</li>
     <li><strong>Abodaten</strong> (bei Abschluss des Premium-Abos): App-Nutzer-Kennung
         und Kauf-/Abostatus.</li>
+    <li><strong>Anmeldung im Web-Zugang:</strong> Meldet sich der Nutzer im Browser an, erzeugt
+        der Server einen Einmal-Code (zwei Minuten gültig) und speichert dazu eine
+        Kurzbeschreibung des Browsers und Betriebssystems (z. B. „Chrome auf macOS", aus der vom
+        Browser übermittelten Kennung), den Zeitpunkt, einen nicht rückrechenbaren Prüfwert der
+        IP-Adresse (zum Schutz vor massenhaften Anfragen) und — nach der Bestätigung in der
+        App — die Zuordnung zum Nutzerkonto. Der Code selbst wird nur als Prüfwert gespeichert.
+        Browser-Beschreibung und Zeitpunkt werden dem Nutzer in der App angezeigt, damit er
+        erkennt, welches Gerät angemeldet werden soll.</li>
   </ul>
   <p>Die App verarbeitet <strong>keine Standortdaten</strong>, kein Adressbuch und keine
      Werbe-Identifier.</p>
@@ -145,6 +154,9 @@
         DSGVO</strong> (Vertragserfüllung).</li>
     <li>Nachweis der Zustimmung zu Rechtstexten, Missbrauchs- und Betrugsvermeidung,
         Sicherheit — <strong>Art. 6 Abs. 1 lit. f DSGVO</strong> (berechtigtes Interesse).</li>
+    <li>Anmeldung im Web-Zugang und Schutz vor missbräuchlichen Anmeldeversuchen —
+        <strong>Art. 6 Abs. 1 lit. b DSGVO</strong> (Bereitstellung des Web-Zugangs) und
+        <strong>Art. 6 Abs. 1 lit. f DSGVO</strong> (Sicherheit).</li>
     <li>Erfüllung gesetzlicher Pflichten des Anbieters (z. B. handels-/steuerrechtliche
         Aufbewahrung eigener Abrechnungsunterlagen) — <strong>Art. 6 Abs. 1 lit. c DSGVO</strong>.</li>
     <li>Für die im Auftrag verarbeiteten Kundendaten des Nutzers bestimmt der Nutzer als
@@ -158,7 +170,10 @@
         Anbieter: Supabase, Inc. (USA); mit Supabase besteht ein Auftragsverarbeitungsvertrag
         (DPA); soweit ein Zugriff aus einem Drittland möglich ist, ist dieser durch
         <strong>EU-Standardvertragsklauseln</strong> abgesichert. Das Hosting erfolgt auf
-        Amazon Web Services (Rechenzentrum Irland).</li>
+        Amazon Web Services (Rechenzentrum Irland). Bei jedem Zugriff der App oder des
+        Web-Zugangs verarbeitet Supabase technisch notwendige Verbindungsdaten (IP-Adresse,
+        Zeitpunkt, aufgerufene Schnittstelle, Kennung der App bzw. des Browsers) in
+        Serverprotokollen (Art. 6 Abs. 1 lit. f DSGVO, sicherer Betrieb).</li>
     <li><strong>E-Mail-Versand:</strong> Systemmails (Registrierungs-Bestätigung, Passwort-Zurücksetzen) werden über den Dienst Resend versandt. Anbieter: Resend, Inc., USA; Resend erhält dabei die E-Mail-Adresse des Nutzers und den Inhalt der Systemmail, die Verarbeitung bei Resend erfolgt in den USA. Mit Resend besteht ein Auftragsverarbeitungsvertrag (DPA) mit EU-Standardvertragsklauseln.</li>
     <li><strong>Prüfung gegen bekannte Datenlecks:</strong> Beim Festlegen eines Passworts (Registrierung, Zurücksetzen) werden die ersten fünf Zeichen eines Prüfwerts (SHA-1) an den Dienst „Have I Been Pwned" (haveibeenpwned.com; Betreiber: Superlative Enterprises Pty Ltd, Australien) übermittelt, um Passwörter aus bekannten Datenlecks abzulehnen (Art. 6 Abs. 1 lit. f DSGVO, Sicherheit). Das Passwort selbst verlässt das Gerät nicht; aus dem übermittelten Teil lässt es sich nicht rekonstruieren. Bei Anmeldung über Apple oder Google entfällt diese Prüfung, weil kein Passwort beim Anbieter hinterlegt wird.</li>
     <li><strong>Apple (Anmeldung mit Apple):</strong> Wählt der Nutzer „Mit Apple anmelden", führt Apple (Apple Distribution International Ltd., Irland) die Anmeldung durch und übermittelt der App ein signiertes Anmelde-Token mit Nutzerkennung und E-Mail-Adresse (oder einer Apple-Weiterleitungsadresse). Apple erfährt dabei, dass der Nutzer sich bei OfficePilotPro anmeldet; Geschäfts- oder Kundendaten des Nutzers erhält Apple nicht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO; es gelten ergänzend die Datenschutzbestimmungen von Apple.</li>
@@ -174,11 +189,20 @@
     <li><strong>RevenueCat</strong> (bei Abschluss des Premium-Abos): Verwaltung des
         Abostatus (RevenueCat, Inc., USA) — erhält eine pseudonyme App-Nutzer-Kennung und den
         Kaufstatus; Absicherung über DPA mit EU-Standardvertragsklauseln.</li>
+    <li><strong>IONOS</strong> (Auslieferung des Web-Zugangs): Die Programmdateien des
+        Web-Zugangs werden von Servern der IONOS SE (Elgendorfer Str. 57, 56410 Montabaur,
+        Deutschland) ausgeliefert. Dabei verarbeitet IONOS technisch notwendige Verbindungsdaten
+        (IP-Adresse, Zeitpunkt, abgerufene Datei, Browser-Kennung) in Serverprotokollen (Art. 6
+        Abs. 1 lit. f DSGVO, sicherer Betrieb); mit IONOS besteht ein
+        Auftragsverarbeitungsvertrag. Die im Web-Zugang verarbeiteten Inhalte (Geschäfts- und
+        Kundendaten) laufen nicht über IONOS, sondern unmittelbar zwischen Browser und
+        Supabase.</li>
   </ul>
   <p>Eine darüber hinausgehende Weitergabe findet nicht statt. Es findet <strong>kein
      Tracking</strong> statt; die App enthält keine Analyse-, Werbe- oder
-     Crash-Reporting-Dienste. Schriftarten sind in der App gebündelt; es werden keine
-     Schriften von Google-Servern nachgeladen.</p>
+     Crash-Reporting-Dienste. Schriftarten und alle Programmbestandteile des Web-Zugangs sind in
+     der App gebündelt bzw. werden vom eigenen Server ausgeliefert; es werden keine Schriften
+     oder Skripte von Servern Dritter nachgeladen.</p>
 
   <h2>10. Kamera-, Foto-, Datei- und Kalenderzugriff</h2>
   <p>Der Zugriff auf Kamera, Fotomediathek bzw. die Dateiauswahl des Betriebssystems
@@ -191,7 +215,7 @@
      (.ics) oder eines Rechnungs-PDFs erfolgt ausschließlich durch den Nutzer an selbst
      gewählte Empfänger.</p>
 
-  <h2>11. Lokale Speicherung auf dem Gerät</h2>
+  <h2>11. Lokale Speicherung auf dem Gerät und im Browser</h2>
   <p>Auf dem Gerät werden Darstellungs-Einstellungen (gewählte App-Farbe, Dark Mode),
      technische Merker (z. B. welche Neuerungen bereits angezeigt wurden) sowie die Anmelde-Sitzung gespeichert, damit die App angemeldet bleibt; die Sitzung liegt im geschützten Speicher des Geräts (iOS-Schlüsselbund bzw. Android-Keystore) und wird nicht in Geräte- oder Cloud-Backups übertragen. Diese Daten werden nicht an Dritte übertragen.</p>
   <p>Schaltet der Nutzer die <strong>Anmeldung per Face ID, Touch ID, Fingerabdruck oder
@@ -204,6 +228,15 @@
      Einstellungen im Bereich Konto ausschalten; die hinterlegten Zugangsdaten werden dabei
      gelöscht, ebenso bei einer Konto-Löschung.</p>
   <p>Bei Konten, die über Apple oder Google angemeldet sind, wird kein Passwort hinterlegt; die Anmeldung per Face ID, Touch ID oder Fingerabdruck mit hinterlegten Zugangsdaten steht für diese Konten nicht zur Verfügung. Die Anmelde-Sitzung wird wie oben beschrieben im geschützten Speicher des Geräts gehalten.</p>
+  <p>Im <strong>Web-Zugang</strong> werden im Speicher des Browsers (Local Storage bzw. Session
+     Storage) die Anmelde-Sitzung, die Wahl „Auf diesem Computer angemeldet bleiben" sowie
+     Darstellungs-Einstellungen abgelegt. Diese Speicherung ist für die vom Nutzer gewünschte
+     Nutzung des Web-Zugangs unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG); Cookies zu
+     Analyse- oder Werbezwecken werden nicht gesetzt. Ohne die Wahl „angemeldet bleiben" endet
+     die Sitzung mit dem Schließen des Browser-Tabs. Einen geschützten Gerätespeicher wie auf dem
+     Mobilgerät gibt es im Browser nicht; an fremden oder gemeinsam genutzten Rechnern sollte
+     sich der Nutzer deshalb abmelden. In der App lassen sich jederzeit alle anderen Geräte
+     abmelden (Einstellungen → Konto).</p>
 
   <h2>12. Speicherdauer und Konto-Löschung</h2>
   <p>Daten werden gespeichert, solange das Nutzerkonto besteht. Das Konto kann in der App
@@ -217,6 +250,15 @@
      Anleitung sowie ein Weg zur Löschung ohne App-Zugriff (per E-Mail) finden sich unter
      <a href="konto-loeschen.html">Konto &amp; Daten löschen</a>.</p>
   <p>Zur Wiederherstellbarkeit im Störfall fertigt der Anbieter täglich Sicherungskopien der Datenbank und der Belegdateien an. Sie werden verschlüsselt und getrennt von der Produktivumgebung aufbewahrt und nach 30 Tagen automatisch überschrieben, Sicherungen vor größeren technischen Eingriffen spätestens nach 90 Tagen. Gelöschte Konten werden aus Sicherungen nicht wiederhergestellt; die Löschung eines Kontos wirkt damit spätestens nach Ablauf dieser Fristen auch in den Sicherungen.</p>
+  <p>Unabhängig davon lässt sich jeder einzelne Kundendatensatz jederzeit in der App löschen
+     (Kunden → Kunde öffnen → Kunde löschen). Dabei werden Adresse, Kontaktdaten, Notizen,
+     Termine und Rechnungsentwürfe dieses Kunden unwiderruflich entfernt. Bereits
+     festgeschriebene Rechnungen bleiben mit dem darin eingefrorenen Namen erhalten, weil sie
+     der gesetzlichen Aufbewahrungspflicht unterliegen (§ 147 AO, § 14b UStG); sonstige
+     personenbezogene Daten des Kunden werden auch in diesem Fall gelöscht.</p>
+  <p>Die bei der Anmeldung im Web-Zugang gespeicherten Angaben (Einmal-Code als Prüfwert,
+     Browser-Beschreibung, Zeitpunkt, Prüfwert der IP-Adresse) werden spätestens nach
+     24 Stunden gelöscht.</p>
 
   <h2>13. Betroffenenrechte</h2>
   <p>Betroffene haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung
@@ -244,6 +286,11 @@
   <p>Alle Verbindungen sind transportverschlüsselt (TLS/HTTPS); die Speicherung erfolgt
      verschlüsselt in der EU. Jedes Konto ist strikt getrennt (Row-Level-Security: Zugriff nur
      auf eigene Daten); Belege und Logos liegen in einem privaten Speicher und sind nur über kurzlebige signierte Links abrufbar. Für Nutzerkonten gilt eine Passwortregel (mindestens 10 Zeichen mit Buchstaben und Ziffern); Passwörter aus bekannten Datenlecks werden abgelehnt.</p>
+  <p>Die Anmeldung im Web-Zugang muss in der App bestätigt werden, nach Prüfung durch Face ID,
+     Fingerabdruck oder Gerätecode; der dafür verwendete Code ist zwei Minuten gültig und nur
+     einmal verwendbar. Der Web-Zugang lädt keine Programmbestandteile von Servern Dritter und
+     ist durch eine Inhaltsrichtlinie (Content Security Policy) gegen eingeschleuste Skripte
+     abgesichert.</p>
 
   <h2>17. Änderungen dieser Erklärung</h2>
   <p>Diese Erklärung wird angepasst, wenn sich Rechtslage oder Funktionsumfang ändern. Die
@@ -253,7 +300,7 @@
   <div class="teil">Teil C — Auftritte bei Facebook und Instagram</div>
 
   <h2>18. Facebook-Seite und Instagram-Profil</h2>
-  <p><em>Dieser Teil wurde am 3. Oktober 2026 ergänzt; die Teile A und B sind unverändert (Stand 2. Oktober 2026).</em></p>
+  <p><em>Dieser Teil wurde am 3. Oktober 2026 ergänzt.</em></p>
   <p>Wir betreiben eine <strong>Facebook-Seite</strong> und ein <strong>Instagram-Profil</strong> („OfficePilotPro"), um über die App zu informieren und Fragen zu beantworten. Anbieter beider Plattformen ist die Meta Platforms Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Irland („Meta").</p>
   <p><strong>Was Meta verarbeitet.</strong> Beim Besuch unserer Auftritte verarbeitet Meta personenbezogene Daten der Besucher in eigener Verantwortung, unter anderem Nutzungs- und Gerätedaten, auch mithilfe von Cookies und auch dann, wenn der Besucher kein Konto bei Facebook oder Instagram hat oder dort nicht angemeldet ist. Meta nutzt diese Daten auch für eigene Zwecke (z. B. Werbung und Produktverbesserung). Dabei können Daten an die Meta Platforms, Inc. in den USA übermittelt werden; Meta stützt diese Übermittlung nach eigenen Angaben auf den EU-US-Datenschutzrahmen (Data Privacy Framework) und auf EU-Standardvertragsklauseln. Auf Art und Umfang dieser Verarbeitung haben wir keinen Einfluss. Einzelheiten nennt Meta in seiner Datenschutzrichtlinie: <a href="https://www.facebook.com/privacy/policy" rel="noopener">https://www.facebook.com/privacy/policy</a> (Facebook) und <a href="https://privacycenter.instagram.com/policy" rel="noopener">https://privacycenter.instagram.com/policy</a> (Instagram).</p>
   <p><strong>Statistik (Insights) — gemeinsame Verantwortung.</strong> Meta stellt uns zusammengefasste, anonyme Statistiken über die Nutzung unserer Auftritte bereit (z. B. Reichweite und Zahl der Reaktionen). Einzelne Besucher können wir darin nicht erkennen. Für die Verarbeitung der Daten zur Seiten-Statistik bei Facebook sind Meta und wir gemeinsam verantwortlich (Art. 26 DSGVO). Grundlage ist die „Seiten-Insights-Ergänzung" von Meta (<a href="https://www.facebook.com/legal/terms/page_controller_addendum" rel="noopener">https://www.facebook.com/legal/terms/page_controller_addendum</a>); danach übernimmt Meta die primäre Verantwortung, insbesondere für die Information der Betroffenen und die Erfüllung ihrer Rechte (<a href="https://www.facebook.com/legal/terms/information_about_page_insights_data" rel="noopener">https://www.facebook.com/legal/terms/information_about_page_insights_data</a>). Für die Statistik des Instagram-Profils gilt das entsprechend, soweit eine gemeinsame Verantwortung besteht. Rechtsgrundlage auf unserer Seite ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an zeitgemäßer Information und an der Auswertung der Reichweite unserer Beiträge).</p>

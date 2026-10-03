@@ -31,7 +31,7 @@
 <div class="wrap">
   <header>
     <h1>Auftragsverarbeitungsvertrag (AVV)</h1>
-    <div class="meta">App „OfficePilotPro" · Art. 28 DSGVO · Stand: 25. September 2026</div>
+    <div class="meta">App „OfficePilotPro" · Art. 28 DSGVO · Stand: 3. Oktober 2026</div>
   </header>
 
   <h2>Präambel und Parteien</h2>
@@ -154,6 +154,13 @@
         Amazon Web Services, Region eu-west-1, Irland) mit Verschlüsselung at rest.</li>
     <li><strong>Zugriffs- und Zugangskontrolle:</strong> Authentifizierung je Konto
         (E-Mail/Passwort, Passwörter nur als Hash); Passwort-Zurücksetzen nur über verifizierte E-Mail; Passwortregel (mindestens 10 Zeichen mit Buchstaben und Ziffern) und Ablehnung von Passwörtern aus bekannten Datenlecks; Anmelde-Sitzung auf dem Gerät im geschützten Speicher; Datenbankrolle ohne Anmeldung ohne jedes Tabellenrecht.</li>
+    <li><strong>Web-Zugang:</strong> Anmeldung ausschließlich über Bestätigung in der App nach
+        Geräteauthentifizierung (Biometrie oder Gerätecode); Einmal-Codes mit zwei Minuten
+        Gültigkeit, serverseitig nur als Prüfwert gespeichert, einmalige Herausgabe des
+        Anmelde-Schlüssels; Begrenzung der Anmeldeversuche; Auslieferung ohne
+        Programmbestandteile Dritter, Inhaltsrichtlinie (CSP), erzwungene
+        Transportverschlüsselung (HSTS); Abmeldung aller anderen Geräte durch den Nutzer mit
+        sofortiger Wirkung (der Server weist abgemeldete Sitzungen bei jeder Anfrage ab).</li>
     <li><strong>Mandantentrennung:</strong> Strikte Datentrennung pro Konto über
         Row-Level-Security auf Datenbankebene — jeder Nutzer kann ausschließlich auf die
         eigenen Daten zugreifen.</li>
